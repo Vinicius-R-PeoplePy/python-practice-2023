@@ -1,0 +1,54 @@
+class Pilot:
+
+    def __init__(self, name='Pilot', id=123456):
+        self.name = name
+        self.id = id
+
+    def greet(self):
+        print(f'Hello, my name is {self.name}')
+
+    def present_id(self):
+        print(f'My pilot ID is {self.id}')
+
+    def set_ship(self, ship_name):
+        self.ship = ship_name
+
+# x = Pilot()
+# x.ship = 'Cargo'
+# print(x.ship)
+
+
+x = Pilot()
+'''x.ship = 'Cargo'
+if hasattr(x, 'ship'):
+    print('Ship found')
+    print(getattr(x, 'ship'))
+else:
+    print('Ship not found, assigning ship')
+    setattr(x, 'ship', 'Frigate')
+    print(x.ship)'''
+'''pilot_attributes = {
+    'ship': 'Cargo',
+    'home_station': 'Wayfare',
+    'rank': 'Captain'
+}
+
+for att in pilot_attributes:
+    setattr(x, att, pilot_attributes[att])
+
+print(x.ship)
+print(x.home_station)
+print(x.rank)'''
+
+y = Pilot('Krowso', 666666)
+
+x.greet()
+y.greet()
+x.present_id()
+y.present_id()
+
+x.set_ship('Cargo')
+y.set_ship('Cruiser')
+
+print(x.ship)
+print(y.ship)
