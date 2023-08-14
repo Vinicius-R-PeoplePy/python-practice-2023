@@ -4,7 +4,7 @@
     while baixo <= alto:  # enquanto ainda não chegou a um elemento
         meio = (baixo + alto) // 2  # verifica elemento central
         chute = lista[meio]
-        if chute == item:  # 4 acha o item
+        if chute == item:  # acha o item
             return meio
         if chute > item:  # O chute foi muito alto
             alto = meio - 1
