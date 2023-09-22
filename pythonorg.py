@@ -720,7 +720,7 @@ else:
 numero = float(input("Digite um número: "))
 if numero % 1 == 0:
     print("Inteiro")
-else;
+else:
     print("Decimal")
 
 # 24. Faça um programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado
