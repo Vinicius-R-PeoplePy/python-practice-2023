@@ -65,7 +65,8 @@ min(L)
 
 # Variáveis locais e globais 
 
-# Uma variável global é definida fora de uma função, pode ser vista por todas as funções do módulo e por todos os módulos que importam o módulo que a definiu. 
+# Uma variável global é definida fora de uma função,
+#pode ser vista por todas as funções do módulo e por todos os módulos que importam o módulo que a definiu. 
 
 EMPRESA="Unidos Venceremos Ltda"
 def imprime_cabeçalho():
@@ -74,7 +75,10 @@ def imprime_cabeçalho():
 
 ##################################
 
-# Variáveis globais devem ser utilizadas o mínimo possível em seus programas, pois dificultam a leitura e violam o encapsuamento da função. O encapsulamento é comprometido porque a função depende de uma variável externa, ou seja, que não é declarada dentro da função nem recebida como parâmetro. 
+# Variáveis globais devem ser utilizadas o mínimo possível em seus programas,
+#pois dificultam a leitura e violam o encapsuamento da função.
+#O encapsulamento é comprometido porque a função depende de uma variável externa, ou seja,
+#que não é declarada dentro da função nem recebida como parâmetro. 
 
 # Tente utilizar variáveis globais apenas para configuração e com valores constantes.
 
@@ -88,7 +92,8 @@ print("a depois de mudar: %d" % a)
 
 ##################################
 
-# Se quisermos modificar uma variável global dentro de uam função devemos informar que estamos usando uma variável global antes de inicializá-la, na primeira linha de nossa função.
+# Se quisermos modificar uma variável global dentro de uma função devemos informar que estamos usando uma variável global
+#antes de inicializá-la, na primeira linha de nossa função.
 
 a=5
 def muda_e_imprime():
@@ -199,7 +204,7 @@ while True:
 
 ##################################
 
-def verificar_comprimento(paalavra, minchar, maxchar):
+def verificar_comprimento(palavra, minchar, maxchar):
     palavra = input("Digite uma palavra: ")
     comprimento = len(palavra)
 
@@ -215,7 +220,9 @@ print(resultado)
 
 ##################################
 '''Escreva uma função que receba uma string e uma lista. A função
-deve comparar a string passada com os elementos da lista, também passada como parâmetro. Retorne verdadeiro se a string for encontrada dentro da lista, e falso em caso contrário'''
+deve comparar a string passada com os elementos da lista,
+também passada como parâmetro.
+Retorne verdadeiro se a string for encontrada dentro da lista, e falso em caso contrário'''
 
 def verificar_string_na_lista(minha_string, minha_lista):
     return minha_string in minha_lista 
@@ -317,7 +324,10 @@ L=[2,3]
 soma(*L) #1
 
 '''
-Em #1, estamos utilizando o asterisco para indicar que queremos desempacotar a lista L utilizando seus valores como parâmetro para a função soma. No exemplo, L[0] será atribuído a 'a' e L[1] a 'b'. Esse recurso permite armazenar nossos parâmetros em listas e evita construções do tipo somsa(L[0], L[1])
+Em #1, estamos utilizando o asterisco para indicar que queremos
+desempacotar a lista L utilizando seus valores como parâmetro para a função soma.
+No exemplo, L[0] será atribuído a 'a' e L[1] a 'b'.
+Esse recurso permite armazenar nossos parâmetros em listas e evita construções do tipo somsa(L[0], L[1])
 '''
 
 ##################################
@@ -528,7 +538,10 @@ minha_lista = [1, [2,3,4, [5,6,7]]]
 imprimir_lista_recursiva(minha_lista)
 
 '''
-Neste exemplo, a função 'imprimir_lista_recursiva' aceita uma lista e um parâmetro opcional 'nível', que representa o nível de aninhamento atual. A função percorre os elementos da lista, e se encontrar outra lista, chama recursivamente a função para imprimir os elementos da lista interna com um nível de indentação maior. Se o elemento não for uma lista, imprime-o com a indentação apropriada.
+Neste exemplo, a função 'imprimir_lista_recursiva' aceita uma lista e um parâmetro opcional 'nível',
+que representa o nível de aninhamento atual. A função percorre os elementos da lista, e se encontrar outra lista,
+chama recursivamente a função para imprimir os elementos da lista interna com um nível de indentação maior.
+Se o elemento não for uma lista, imprime-o com a indentação apropriada.
 
 O exemplo de uso demonstra como chamar a função com a lista fornecida e imprimir os elementos considerado a estrutura aninhada.
 '''
@@ -601,7 +614,8 @@ else:
 ##################################
 
 '''Modifique o programa do exercício 9.1 para que receba mais dois
-parâmetros: a linha de início e a de fim para impressão. O programa deve imprimir apenas as linhas entre esses dois valores (incluindo as linhas de início e fim). '''
+parâmetros: a linha de início e a de fim para impressão.
+O programa deve imprimir apenas as linhas entre esses dois valores (incluindo as linhas de início e fim). '''
 
 import sys 
 
@@ -684,7 +698,8 @@ combinar_arquivos(arquivo_pares, arquivo_impares, arquivo_combinado)
 
 ##################################
 
-'''Crie um programa que receba o nome de dois arquivos como parâmetros da linha de comando e que gere um arquivo de saída com as linhas do primeiro e do segundo arquivo'''
+'''Crie um programa que receba o nome de dois arquivos como parâmetros da linha de comando e que gere um arquivo de saída
+com as linhas do primeiro e do segundo arquivo'''
 
 import sys 
 
@@ -760,7 +775,9 @@ for linha in entrada.readlines():
         print(linha)
 entrada.close 
 
-''' Modifique o programa da listagem 9.6 para imprimir 40 vezes o símbolo de = se este for o primeiro caractere da linha. Adicione também a opção para parar de imprimir até que se pressione a tecla Enter cada vez que uma linha iniciar com . como primeiro caractere.'''
+''' Modifique o programa da listagem 9.6 para imprimir 40 vezes o símbolo de = se este for o primeiro caractere da linha.
+Adicione também a opção para parar de imprimir
+até que se pressione a tecla Enter cada vez que uma linha iniciar com . como primeiro caractere.'''
 
 LARGURA = 79
 entrada = open("python\estudos\entrada.txt")
@@ -784,7 +801,9 @@ entrada.close()
 ##################################
 
 '''Crie um programa que leia um arquivo-texto e gere um arquivo de
-saída paginado. Cada linha não deve conter mais de 76 caracteres. Cada página terá no máximo 60 linhas. Adicione na última linha de cada página o número da página atual e o nome do arquivo original.'''
+saída paginado. Cada linha não deve conter mais de 76 caracteres.
+Cada página terá no máximo 60 linhas.
+Adicione na última linha de cada página o número da página atual e o nome do arquivo original.'''
 
 def paginar_arquivo(entrada, saida):
     LARGURA_MAXIMA = 76
@@ -956,12 +975,17 @@ if resultado is not None:
 
 
 '''
-Neste exemplo, a chave do dicionário é uma tupla '(palavra, linha, coluna)', onde 'palavra' é a palavra encontrada, 'linha' é o número da linha e 'coluna' é o número da coluna. O valor associado a cada chave é uma lista que armazena o número de ocorrências da palavra. O exemplo de uso demostra como chamar a função com um arquivo de exemplo e imprimir o resultado, incluindo a linha e a coluna de cada ocorrência. Certifique-se de substituir '"exemplo.txt"' pelo nome real do seu arquivo.'''
+Neste exemplo, a chave do dicionário é uma tupla '(palavra, linha, coluna)',
+onde 'palavra' é a palavra encontrada, 'linha' é o número da linha e 'coluna'
+é o número da coluna. O valor associado a cada chave é uma lista que armazena o número de ocorrências da palavra.
+O exemplo de uso demostra como chamar a função com um arquivo de exemplo e imprimir o resultado,
+incluindo a linha e a coluna de cada ocorrência. Certifique-se de substituir '"exemplo.txt"' pelo nome real do seu arquivo.'''
 
 
 ########################################
 
-'''Crie um programa que imprima as linhas de um arquivo. Esse programa deve receber três parâmetros pela linha de comando: o nome do arquivo, a linha inicial e a última linha a imprimir.'''
+'''Crie um programa que imprima as linhas de um arquivo.
+Esse programa deve receber três parâmetros pela linha de comando: o nome do arquivo, a linha inicial e a última linha a imprimir.'''
 
 import sys 
 
@@ -998,7 +1022,8 @@ else:
 
 ########################################
 
-'''Crie um programa que leia um arquivo-texto e elimine os espaços repetidos entre as palavras e no fim das linhas. O arquivo de saída também não deve ter mais de uma linha em branco repetida.'''
+'''Crie um programa que leia um arquivo-texto e elimine os espaços repetidos entre as palavras e no fim das linhas.
+O arquivo de saída também não deve ter mais de uma linha em branco repetida.'''
 
 '''import sys
 
@@ -1031,7 +1056,11 @@ arq_saida.close()'''
 
 ###########################################
 
-'''Altere o programa da listagem 7.5, o jogo da forca. Utilize um arquivo em que uma palavra seja gravada a cada linha. Use um editor de textos para gerar o arquivo. Ao iniciar o programa, utilize esse arquivo para carregar a lista de palavras. Experimente também perguntar o nome do jogador e gerar um arquivo com o número de acertos dos cinco melhores.'''
+'''Altere o programa da listagem 7.5, o jogo da forca.
+Utilize um arquivo em que uma palavra seja gravada a cada linha.
+Use um editor de textos para gerar o arquivo. Ao iniciar o programa,
+utilize esse arquivo para carregar a lista de palavras.
+Experimente também perguntar o nome do jogador e gerar um arquivo com o número de acertos dos cinco melhores.'''
 
 ############################################
 
@@ -1161,7 +1190,11 @@ while True:
 ############################################
 
 
-'''Altere o Programa 7.2, o jogo da forca. Utilize um arquivo em que uma palavra seja gravada a cada linha. Use um editor de textos para gerar o arquivo. Ao iniciar o programa, utilize esse arquivo para carregar (ler) a lista de palavras. Experimente também perguntar o nome do jogador e gerar um arquivo com o número de acertos dos cinco melhores.'''
+'''Altere o Programa 7.2, o jogo da forca.
+Utilize um arquivo em que uma palavra seja gravada a cada linha.
+Use um editor de textos para gerar o arquivo.
+Ao iniciar o programa, utilize esse arquivo para carregar (ler) a lista de palavras.
+Experimente também perguntar o nome do jogador e gerar um arquivo com o número de acertos dos cinco melhores.'''
 
 
 palavras = []
